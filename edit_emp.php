@@ -11,15 +11,14 @@
         $upd_data=$con->query("UPDATE employee SET emp_id='$emp_id',emp_name='$emp_name',telephone='$telephone',
         email='$email' WHERE emp_id='$selected_id'");
         if(!$upd_data){
-            /*echo "<script>
+            echo "<script>
                     alert('ไม่สามารถแก้ไขข้อมูลได้');
                     window.history.back();
-                  </script>";*/
+                  </script>";
         }else{
             header('location:employee.php');
             //echo "<script>window.location.href='employee.php';</script>"
             //echo "<META HTTP-EQUIV='Refresh' CONTENT='0;URL=employee.php'>";
-
         }
     }
 ?>
